@@ -505,6 +505,7 @@
     <!-- Height of the status bar -->
     <dimen name="status_bar_height_portrait">80.0px</dimen>
     <dimen name="status_bar_height_landscape">24.0dp</dimen>
+    <dimen name="rounded_corner_radius_top">104px</dimen>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
