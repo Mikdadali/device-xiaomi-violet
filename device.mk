@@ -7,9 +7,6 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/violet/violet-vendor.mk)
 
-# GoogleCamera
-$(call inherit-product-if-exists, packages/apps/GoogleCamera/gcam.mk)
-
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
@@ -22,7 +19,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-superior
+    $(LOCAL_PATH)/overlay-havoc
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
