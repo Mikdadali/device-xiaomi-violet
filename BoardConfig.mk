@@ -89,9 +89,6 @@ BOARD_USES_QCNE := true
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
-# Set boot SPL
-BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
@@ -165,8 +162,8 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD := true
 
-# Security patch level
-VENDOR_SECURITY_PATCH := 2018-08-05
+# SurfaceFlinger
+TARGET_USE_AOSP_SURFACEFLINGER := true
 
 # Sepolicy
 include device/qcom/sepolicy/sepolicy.mk
