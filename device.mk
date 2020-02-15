@@ -7,9 +7,6 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/violet/violet-vendor.mk)
 
-# Firmware
-$(call inherit-product, vendor/xiaomi/violet/firmware/firmware.mk)
-
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
@@ -367,6 +364,10 @@ PRODUCT_PACKAGES += \
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
+
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_xiaomi
 
 # RIL
 PRODUCT_PACKAGES += \
