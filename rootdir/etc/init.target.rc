@@ -175,6 +175,14 @@ on boot
     write /dev/cpuset/restricted/cpus 0-5
 
 
+#Smart-Charging
+  chown system system /sys/class/power_supply/battery/input_suspend
+  chmod 0666 /sys/class/power_supply/battery/input_suspend
+
+# FPS Info
+  chown system graphics /sys/class/graphics/fb0/measured_fps
+  chmod 0666 /sys/class/graphics/fb0/measured_fps
+
 # D2TW
     chown system system /proc/tp_gesture
     chmod 0660 /proc/tp_gesture
@@ -248,9 +256,6 @@ service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
    group system wifi inet sdcard_rw media_rw diag
    disabled
 
-    chown system system /sys/class/power_supply/battery/input_suspend
-    chmod 0666 /sys/class/power_supply/battery/input_suspend
-
 service qfp-daemon /vendor/bin/qfp-daemon
     class late_start
     user system
@@ -274,6 +279,3 @@ on property:sys.thermallct.isincall=1
 on property:sys.thermallct.isincall=0
     write /sys/class/power_supply/battery/device/thermalcall 0
 
-# FPS Info
-  chown system graphics /sys/class/graphics/fb0/measured_fps
-  chmod 0666 /sys/class/graphics/fb0/measured_fps
