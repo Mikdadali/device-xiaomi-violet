@@ -457,4 +457,4 @@ PRODUCT_BOOT_JARS += \
 
 # PixelWallpapers
 PRODUCT_PACKAGES += \
-    PixelLiveWallpaperPrebuilt
+    PixelLiveWallpaper
