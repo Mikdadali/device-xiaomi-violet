@@ -205,3 +205,10 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/violet/BoardConfigVendor.mk
+
+# Build with clang
+TARGET_KERNEL_CLANG_VERSION := 11
+TARGET_KERNEL_USE_LLD := true
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_NEW_CLANG_COMPILE := true
+TARGET_KERNEL_GCC_WITH_RELR := true
